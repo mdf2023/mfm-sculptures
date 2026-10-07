@@ -336,6 +336,96 @@ window.MFM_PIECES = {
       }
     ]
   },
+  "dinosaur": {
+    "title": "Dinosaur",
+    "caption": "Dinosaur skeleton sculpture.",
+    "images": [
+      {
+        "src": "img/dinosaur-side-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, side view"
+      },
+      {
+        "src": "img/dinosaur-front-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, front three-quarter view"
+      },
+      {
+        "src": "img/dinosaur-front-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, front view"
+      },
+      {
+        "src": "img/dinosaur-side-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, side three-quarter view"
+      },
+      {
+        "src": "img/dinosaur-side-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, side view, other side"
+      },
+      {
+        "src": "img/dinosaur-back-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, back view from above"
+      },
+      {
+        "src": "img/dinosaur-back-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, back three-quarter view"
+      },
+      {
+        "src": "img/dinosaur-back-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, back three-quarter view, other side"
+      }
+    ]
+  },
+  "paper-airplane": {
+    "title": "Paper Airplane",
+    "caption": "Folded sheet metal paper airplane.",
+    "images": [
+      {
+        "src": "img/paper-airplane-side-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Paper airplane, side view"
+      },
+      {
+        "src": "img/paper-airplane-front-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Paper airplane, front view"
+      },
+      {
+        "src": "img/paper-airplane-side-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Paper airplane, side view, other side"
+      },
+      {
+        "src": "img/paper-airplane-side-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Paper airplane, low side view"
+      },
+      {
+        "src": "img/paper-airplane-top-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Paper airplane, top view"
+      }
+    ]
+  },
   "longhorns": {
     "title": "Texas Longhorns Logo",
     "caption": "Texas Longhorns logo with a wooden stand.",
