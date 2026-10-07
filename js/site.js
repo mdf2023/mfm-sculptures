@@ -121,6 +121,29 @@
       if (value) { stop(); } else { start(); }
     };
 
+    // Arrow buttons and swiping. After you move it yourself, the timer starts over.
+    var go = function (index) {
+      show(index);
+      if (timer) { stop(); start(); }
+    };
+    document.getElementById("hero-prev").addEventListener("click", function () { go(current - 1); });
+    document.getElementById("hero-next").addEventListener("click", function () { go(current + 1); });
+
+    var swipeX = null;
+    var swipeY = null;
+    heroBox.addEventListener("touchstart", function (e) {
+      swipeX = e.touches[0].clientX;
+      swipeY = e.touches[0].clientY;
+    }, { passive: true });
+    heroBox.addEventListener("touchend", function (e) {
+      if (swipeX === null) { return; }
+      var dx = e.changedTouches[0].clientX - swipeX;
+      var dy = e.changedTouches[0].clientY - swipeY;
+      swipeX = null;
+      // A sideways drag of 40px or more, that is not mostly vertical, counts as a swipe.
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { go(current + (dx < 0 ? 1 : -1)); }
+    }, { passive: true });
+
     heroPause.addEventListener("click", function () { setPaused(!userPaused); });
     heroBox.addEventListener("mouseenter", stop);
     heroBox.addEventListener("mouseleave", start);
