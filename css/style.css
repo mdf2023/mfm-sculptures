@@ -411,10 +411,33 @@ a {
   }
 }
 
+/* Banner (home): a wide photo that runs edge to edge under the hero. */
+
+.banner {
+  margin: 0;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .banner img {
+    aspect-ratio: 2 / 1;
+  }
+}
+
 /* Parts list (home) */
 
 .parts__intro {
   margin: 1rem 0 2.25rem;
+}
+
+.h2 + .parts {
+  margin-top: 1.5rem;
 }
 
 .parts {
@@ -484,6 +507,9 @@ a {
 }
 
 .eagle__text {
+  /* max-width: none lets the paragraph stretch to the full width of the
+     photos below it. Delete this line to go back to a narrow text column. */
+  max-width: none;
   margin: 1rem 0 2rem;
 }
 
