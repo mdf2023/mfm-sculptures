@@ -30,6 +30,10 @@ Then open http://localhost:8000.
 
 ## Common updates
 
+### Capitalization
+
+Headings, buttons, nav links, form labels, piece names, and step labels use Title Case (small words like "a", "and", "from", and "the" stay lowercase unless they start the title). Body paragraphs, captions, alt text, and form messages use normal sentence case. When you add a piece, put its name in Title Case in `portfolio.html`, `index.html`, and `js/pieces.js`.
+
 ### Change the commission dates
 
 Search for "June 2027" and edit it. It appears in `index.html` (hero note and bottom section) and `commissions.html` (the dark box at the top and the page description). Update the `<meta>` description near the top of each file too.

@@ -1,6 +1,7 @@
 /* MFM Sculptures
-   Palette comes from the work: shop-floor concrete, mill-scale steel, and the
-   heat-tint blues and straws that show up on welded steel. */
+   Palette: forest greens (the original site green, pushed further), a bright
+   leaf green for big type on dark, and the straw yellow of heat-tinted steel.
+   The blue-to-straw heat tints survive only in the build-step markers. */
 
 @font-face {
   font-family: "Archivo";
@@ -18,14 +19,16 @@
 }
 
 :root {
-  --ground: #d4d5d0;
-  --ground-line: #b5b8b1;
-  --ink: #1d2327;
-  --ink-soft: #48525a;
-  --scale: #2b343a;
-  --on-scale: #e6e8e4;
-  --steel: #9aa3a8;
-  --temper: #2b4294;
+  --ground: #e3e9d8;
+  --ground-line: #b8c5a9;
+  --ink: #13231a;
+  --ink-soft: #3b5243;
+  --scale: #1c3a26;
+  --on-scale: #eef3e6;
+  --steel: #a9c4b0;
+  --green: #2f6b3c;
+  --link: #1d5a2f;
+  --leaf: #a6e07a;
   --straw: #dcb95a;
 
   --display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
@@ -71,12 +74,12 @@ img {
 }
 
 a {
-  color: var(--temper);
+  color: var(--link);
   text-underline-offset: 0.2em;
 }
 
 :focus-visible {
-  outline: 3px solid var(--temper);
+  outline: 3px solid var(--link);
   outline-offset: 3px;
 }
 
@@ -114,8 +117,42 @@ a {
 }
 
 .section--scale {
+  position: relative;
+  overflow: hidden;
   background: var(--scale);
   color: var(--on-scale);
+}
+
+/* Outlined ghost word behind the steps; the step photos cover its lower part. */
+.section--scale::before {
+  content: "Build";
+  content: "Build" / "";
+  position: absolute;
+  right: -0.03em;
+  bottom: 0.05em;
+  color: transparent;
+  font: 800 clamp(9rem, 30vw, 26rem) / 0.8 var(--display);
+  font-stretch: 66%;
+  letter-spacing: -0.02em;
+  -webkit-text-stroke: 2px rgba(166, 224, 122, 0.38);
+  pointer-events: none;
+}
+
+.section--scale .wrap {
+  position: relative;
+}
+
+.section--green {
+  background: var(--green);
+  color: #fff;
+}
+
+.section--green .button--straw:hover {
+  color: var(--ink);
+}
+
+.section--flush {
+  padding-top: 0;
 }
 
 .section--tight-top {
@@ -152,9 +189,15 @@ a {
 }
 
 .h2 {
-  font-size: clamp(2rem, 4.4vw, 3.25rem);
-  line-height: 1;
-  font-stretch: 76%;
+  color: var(--green);
+  font-size: clamp(2.6rem, 7vw, 5.75rem);
+  line-height: 0.92;
+  font-stretch: 70%;
+}
+
+.section--scale .h2,
+.section--green .h2 {
+  color: var(--leaf);
 }
 
 .lede {
@@ -165,7 +208,7 @@ a {
 /* Header */
 
 .site-header {
-  border-bottom: 1px solid var(--ground-line);
+  border-bottom: 6px solid var(--green);
 }
 
 .site-header__inner {
@@ -202,11 +245,12 @@ a {
 }
 
 .site-nav a:hover {
-  border-bottom-color: var(--steel);
+  border-bottom-color: var(--green);
 }
 
 .site-nav a[aria-current="page"] {
-  border-bottom-color: var(--ink);
+  border-bottom-color: var(--green);
+  color: var(--green);
 }
 
 /* Buttons */
@@ -224,19 +268,20 @@ a {
 }
 
 .button:hover {
-  border-color: var(--temper);
-  color: var(--temper);
+  border-color: var(--link);
+  color: var(--link);
 }
 
 .button--solid {
-  background: var(--ink);
-  color: var(--ground);
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
 }
 
 .button--solid:hover {
-  border-color: var(--temper);
-  background: var(--temper);
-  color: #f3f4f0;
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
 }
 
 .button--straw {
@@ -257,37 +302,47 @@ a {
   gap: 0.75rem;
 }
 
-/* Hero (home) */
+/* Hero (home): the headline is huge and the photo sits on top of its right
+   edge, so the last letters of some lines are covered but still readable. */
 
 .hero {
   display: grid;
-  gap: 2rem;
-  align-items: end;
   max-width: var(--max);
   margin: 0 auto;
-  padding: clamp(1.5rem, 5vw, 4rem) var(--gutter) clamp(2.5rem, 6vw, 5rem);
-}
-
-@media (min-width: 860px) {
-  .hero {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-    gap: clamp(2rem, 5vw, 4.5rem);
-  }
+  padding: clamp(1.5rem, 4vw, 3rem) var(--gutter) clamp(3rem, 7vw, 6rem);
 }
 
 .hero__title {
-  margin: 0 0 1.25rem;
-  font: 800 clamp(3rem, 7.6vw, 6.4rem) / 0.9 var(--display);
-  font-stretch: 68%;
+  order: 0;
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  color: var(--green);
+  font: 800 clamp(3.5rem, 11.5vw, 10rem) / 0.86 var(--display);
+  font-stretch: 66%;
   letter-spacing: -0.015em;
   text-wrap: balance;
+}
+
+.hero__photo {
+  order: 1;
+  position: relative;
+  z-index: 1;
+  margin: 0 0.9rem 0 0;
+  background: var(--ground-line);
+  box-shadow: 0.9rem 0.9rem 0 var(--leaf);
+}
+
+.hero__body {
+  order: 2;
+  padding-top: 2rem;
 }
 
 .hero__lede {
   max-width: 32ch;
   margin: 0 0 1.75rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 1.35rem;
+  line-height: 1.45;
 }
 
 .hero__note {
@@ -296,16 +351,36 @@ a {
   font-size: 1rem;
 }
 
-.hero__photo {
-  margin: 0;
-  background: var(--ground-line);
-}
-
 .hero__photo img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: 50% 40%;
+}
+
+@media (min-width: 860px) {
+  .hero {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 1.5rem;
+  }
+
+  .hero__title {
+    grid-column: 1 / 10;
+    grid-row: 1;
+  }
+
+  .hero__photo {
+    grid-column: 8 / 13;
+    grid-row: 1 / span 2;
+    align-self: start;
+    margin: 1.5rem 0.9rem 0 0;
+  }
+
+  .hero__body {
+    grid-column: 1 / 7;
+    grid-row: 2;
+    padding-top: 2.25rem;
+  }
 }
 
 /* One orchestrated moment on load: the photo wipes up, the headline rises. */
@@ -355,7 +430,7 @@ a {
 .parts__row {
   display: grid;
   gap: 0.15rem 2rem;
-  padding: 1rem 0.25rem;
+  padding: 1rem 0.75rem;
   border-top: 1px solid var(--ink);
   color: var(--ink);
   text-decoration: none;
@@ -369,20 +444,28 @@ a {
 }
 
 .parts__piece {
-  font: 700 clamp(1.4rem, 3vw, 1.9rem) / 1.1 var(--display);
-  font-stretch: 80%;
+  font: 800 clamp(2rem, 5.5vw, 3.75rem) / 0.95 var(--display);
+  font-stretch: 70%;
 }
 
 .parts__made {
   color: var(--ink-soft);
 }
 
-.parts__row:hover .parts__piece {
-  color: var(--temper);
+.parts__row:hover,
+.parts__row:focus-visible {
+  background: var(--green);
+  color: var(--on-scale);
 }
 
-.parts__row:hover {
-  background: rgba(29, 35, 39, 0.05);
+.parts__row:hover .parts__piece,
+.parts__row:focus-visible .parts__piece {
+  color: var(--leaf);
+}
+
+.parts__row:hover .parts__made,
+.parts__row:focus-visible .parts__made {
+  color: var(--on-scale);
 }
 
 /* Photo buttons (open the viewer) */
@@ -597,8 +680,9 @@ a {
 .tile__title {
   display: block;
   margin-top: 0.75rem;
-  font: 700 1.5rem/1.1 var(--display);
-  font-stretch: 80%;
+  color: var(--green);
+  font: 800 clamp(1.9rem, 3vw, 2.5rem) / 1 var(--display);
+  font-stretch: 70%;
 }
 
 .tile__made {
@@ -612,7 +696,7 @@ a {
 .tile__count {
   display: block;
   margin-top: 0.4rem;
-  color: var(--temper);
+  color: var(--link);
   font: 500 0.95rem/1 var(--display);
 }
 
@@ -656,8 +740,12 @@ a {
 .notice {
   margin-bottom: clamp(2rem, 5vw, 3.5rem);
   padding: clamp(1.5rem, 4vw, 2.75rem);
-  background: var(--scale);
-  color: var(--on-scale);
+  background: var(--leaf);
+  color: var(--ink);
+}
+
+.notice .h2 {
+  color: var(--scale);
 }
 
 .notice .h2 {
@@ -741,7 +829,8 @@ a {
 /* Footer */
 
 .site-footer {
-  background: var(--ink);
+  border-top: 6px solid var(--leaf);
+  background: var(--scale);
   color: var(--on-scale);
 }
 
@@ -761,14 +850,14 @@ a {
 }
 
 .site-footer .wordmark {
-  color: var(--on-scale);
+  color: var(--leaf);
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
 .site-footer h2 {
   margin: 0 0 0.6rem;
   font: 600 1rem/1.2 var(--display);
-  color: var(--steel);
+  color: var(--straw);
 }
 
 .site-footer ul {
@@ -803,12 +892,12 @@ a {
   margin: 0;
   padding: 0;
   border: 0;
-  background: rgba(24, 29, 33, 0.97);
+  background: rgba(12, 28, 19, 0.97);
   color: var(--on-scale);
 }
 
 .viewer::backdrop {
-  background: rgba(24, 29, 33, 0.97);
+  background: rgba(12, 28, 19, 0.97);
 }
 
 .viewer[open] {
@@ -874,7 +963,7 @@ a {
   transform: translateY(-50%);
   border: 2px solid var(--steel);
   border-radius: 2px;
-  background: rgba(24, 29, 33, 0.75);
+  background: rgba(12, 28, 19, 0.75);
   color: var(--on-scale);
   cursor: pointer;
 }
@@ -925,4 +1014,48 @@ a {
 
 .prose .h2 {
   margin-bottom: 1rem;
+}
+
+
+/* Page bands: a full-width green strip with a giant page title. The content
+   below is pulled up over the bottom of the title, so the first photos (or the
+   notice box) cover the letters' feet while the word stays easy to read. */
+
+.band {
+  --pull: clamp(0.5rem, 2.3vw, 2rem);
+  background: var(--green);
+  color: #fff;
+  padding: clamp(1.5rem, 4vw, 3rem) 0 0;
+}
+
+.band__lede {
+  max-width: 34ch;
+  margin: 0 0 clamp(0.5rem, 2vw, 1.25rem);
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.band__title {
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  color: var(--leaf);
+  font: 800 clamp(4.25rem, 19vw, 16rem) / 0.8 var(--display);
+  font-stretch: 66%;
+  letter-spacing: -0.015em;
+}
+
+.pull {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(var(--pull, clamp(0.5rem, 2.3vw, 2rem)) * -1);
+}
+
+.prose--first {
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+}
+
+.band + .section--flush .notice.pull,
+.band + .section--flush .tiles.pull {
+  margin-top: calc(clamp(0.5rem, 2.3vw, 2rem) * -1);
 }
