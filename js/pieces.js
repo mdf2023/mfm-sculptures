@@ -225,12 +225,6 @@ window.MFM_PIECES = {
         "w": 1600,
         "h": 1200,
         "alt": "F1 car, back view"
-      },
-      {
-        "src": "img/f1-car-back-2-1600.webp",
-        "w": 1600,
-        "h": 1200,
-        "alt": "F1 car, back view from above"
       }
     ]
   },
