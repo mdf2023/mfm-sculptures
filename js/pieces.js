@@ -55,7 +55,7 @@ window.MFM_PIECES = {
     ]
   },
   "eagle": {
-    "title": "Bald eagle",
+    "title": "Bald Eagle",
     "caption": "Bald eagle made from silverware. The tree branch stand is made from knife handles and a brake rotor.",
     "images": [
       {
@@ -85,7 +85,7 @@ window.MFM_PIECES = {
     ]
   },
   "boat": {
-    "title": "Fishing boat",
+    "title": "Fishing Boat",
     "caption": "Fishing boat made from bolts, nails, and formed sheet metal.",
     "images": [
       {
@@ -139,7 +139,7 @@ window.MFM_PIECES = {
     ]
   },
   "helicopter": {
-    "title": "Rescue helicopter",
+    "title": "Rescue Helicopter",
     "caption": "Rescue helicopter made from nails, sheet metal, and spark plug engines.",
     "images": [
       {
@@ -211,7 +211,7 @@ window.MFM_PIECES = {
     ]
   },
   "xwing": {
-    "title": "X-wing",
+    "title": "X-Wing",
     "caption": "X-wing with spark plug engines and a wooden stand.",
     "images": [
       {
@@ -235,7 +235,7 @@ window.MFM_PIECES = {
     ]
   },
   "longhorns": {
-    "title": "Texas Longhorns logo",
+    "title": "Texas Longhorns Logo",
     "caption": "Texas Longhorns logo with a wooden stand.",
     "images": [
       {
@@ -247,7 +247,7 @@ window.MFM_PIECES = {
     ]
   },
   "chiefs": {
-    "title": "Kansas City Chiefs logo",
+    "title": "Kansas City Chiefs Logo",
     "caption": "Kansas City Chiefs logo with a wooden stand.",
     "images": [
       {
@@ -259,7 +259,7 @@ window.MFM_PIECES = {
     ]
   },
   "pigs": {
-    "title": "Pig family",
+    "title": "Pig Family",
     "caption": "Family of pigs made from bolts. The brothers and father wear ties, and the mother and daughter wear dresses.",
     "images": [
       {
@@ -277,7 +277,7 @@ window.MFM_PIECES = {
     ]
   },
   "dog": {
-    "title": "Dog and fire hydrant",
+    "title": "Dog and Fire Hydrant",
     "caption": "Dog and fire hydrant made from bolts and nails.",
     "images": [
       {
