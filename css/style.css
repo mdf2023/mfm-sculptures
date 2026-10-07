@@ -204,6 +204,8 @@ a {
 /* Header */
 
 .site-header {
+  /* Same dark green as the eagle build section (--scale). */
+  background: var(--scale);
   border-bottom: 6px solid var(--forest);
 }
 
@@ -219,7 +221,7 @@ a {
 }
 
 .wordmark {
-  color: var(--ink);
+  color: #fff;
   font: 800 1.6rem/1 var(--display);
   font-stretch: 78%;
   letter-spacing: -0.01em;
@@ -235,19 +237,20 @@ a {
 .site-nav a {
   padding: 0.85rem 0;
   border-bottom: 2px solid transparent;
-  color: var(--ink);
+  color: #fff;
   font: 500 1rem/1 var(--display);
   text-decoration: none;
 }
 
+/* Menu links are white, and turn orange when you hover over them. */
 .site-nav a:hover {
-  border-bottom-color: var(--accent);
-  color: var(--accent);
+  border-bottom-color: var(--accent-soft);
+  color: var(--accent-soft);
 }
 
 .site-nav a[aria-current="page"] {
-  border-bottom-color: var(--forest);
-  color: var(--forest);
+  border-bottom-color: #fff;
+  color: #fff;
 }
 
 /* Buttons */
