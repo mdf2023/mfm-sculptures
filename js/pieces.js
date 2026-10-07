@@ -192,6 +192,84 @@ window.MFM_PIECES = {
       }
     ]
   },
+  "f1-car": {
+    "title": "F1 Car",
+    "caption": "F1 car welded from steel and sheet metal.",
+    "images": [
+      {
+        "src": "img/f1-car-front-2-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "F1 car, front three-quarter view"
+      },
+      {
+        "src": "img/f1-car-front-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "F1 car, front view"
+      },
+      {
+        "src": "img/f1-car-front-3-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "F1 car, front three-quarter view"
+      },
+      {
+        "src": "img/f1-car-side-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "F1 car, side view"
+      },
+      {
+        "src": "img/f1-car-back-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "F1 car, back view"
+      },
+      {
+        "src": "img/f1-car-back-2-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "F1 car, back view from above"
+      }
+    ]
+  },
+  "motorcycle": {
+    "title": "Motorcycle",
+    "caption": "Motorcycle with a spark plug engine, a wrench frame, nail handlebars, and wheels made from chain links.",
+    "images": [
+      {
+        "src": "img/motorcycle-side-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Motorcycle, side view"
+      },
+      {
+        "src": "img/motorcycle-side-2-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Motorcycle, side view"
+      },
+      {
+        "src": "img/motorcycle-front-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Motorcycle, front three-quarter view"
+      },
+      {
+        "src": "img/motorcycle-front-2-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Motorcycle, front three-quarter view"
+      },
+      {
+        "src": "img/motorcycle-back-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Motorcycle, back view"
+      }
+    ]
+  },
   "fisherman": {
     "title": "Fisherman",
     "caption": "Fisherman made from bolts, nails, and washers, with a wooden stand.",
