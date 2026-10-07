@@ -1,0 +1,297 @@
+/* Photo sets for the viewer. Edit alongside portfolio.html when adding a piece. */
+window.MFM_PIECES = {
+  "duck": {
+    "title": "Duck",
+    "caption": "Duck sculpture made from spoons.",
+    "images": [
+      {
+        "src": "img/duck-side-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Duck, side view"
+      },
+      {
+        "src": "img/duck-side-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Duck, side view"
+      },
+      {
+        "src": "img/duck-side-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Duck, side view"
+      },
+      {
+        "src": "img/duck-front-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Duck, front view"
+      },
+      {
+        "src": "img/duck-front-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Duck, front view"
+      },
+      {
+        "src": "img/duck-back-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Duck, back view"
+      },
+      {
+        "src": "img/duck-back-1-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Duck, back view"
+      },
+      {
+        "src": "img/duck-back-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Duck, back view"
+      }
+    ]
+  },
+  "eagle": {
+    "title": "Bald eagle",
+    "caption": "Bald eagle made from silverware. The tree branch stand is made from knife handles and a brake rotor.",
+    "images": [
+      {
+        "src": "img/eagle-right-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Bald eagle, right view"
+      },
+      {
+        "src": "img/eagle-front-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Bald eagle, front view"
+      },
+      {
+        "src": "img/eagle-left-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Bald eagle, left view"
+      },
+      {
+        "src": "img/eagle-back-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Bald eagle, back view"
+      }
+    ]
+  },
+  "boat": {
+    "title": "Fishing boat",
+    "caption": "Fishing boat made from bolts, nails, and formed sheet metal.",
+    "images": [
+      {
+        "src": "img/boat-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Fishing boat, three-quarter view"
+      },
+      {
+        "src": "img/boat-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Fishing boat, three-quarter view"
+      },
+      {
+        "src": "img/boat-side-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Fishing boat, side view"
+      },
+      {
+        "src": "img/boat-side-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Fishing boat, side view"
+      },
+      {
+        "src": "img/boat-front-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Fishing boat, front view"
+      },
+      {
+        "src": "img/boat-back-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Fishing boat, back view"
+      },
+      {
+        "src": "img/boat-back-1-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Fishing boat, back view"
+      },
+      {
+        "src": "img/boat-back-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Fishing boat, back view"
+      }
+    ]
+  },
+  "helicopter": {
+    "title": "Rescue helicopter",
+    "caption": "Rescue helicopter made from nails, sheet metal, and spark plug engines.",
+    "images": [
+      {
+        "src": "img/helicopter-side-2-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Rescue helicopter, side view"
+      },
+      {
+        "src": "img/helicopter-side-3-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Rescue helicopter, side view"
+      },
+      {
+        "src": "img/helicopter-side-1-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Rescue helicopter, side view"
+      },
+      {
+        "src": "img/helicopter-side-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Rescue helicopter, side view"
+      },
+      {
+        "src": "img/helicopter-front-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Rescue helicopter, front view"
+      },
+      {
+        "src": "img/helicopter-back-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Rescue helicopter, back view"
+      },
+      {
+        "src": "img/helicopter-back-1-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Rescue helicopter, back view"
+      },
+      {
+        "src": "img/helicopter-back-2-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Rescue helicopter, back view"
+      }
+    ]
+  },
+  "fisherman": {
+    "title": "Fisherman",
+    "caption": "Fisherman made from bolts, nails, and washers, with a wooden stand.",
+    "images": [
+      {
+        "src": "img/fisherman-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Fisherman, front view"
+      },
+      {
+        "src": "img/fisherman-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Fisherman, back view"
+      }
+    ]
+  },
+  "xwing": {
+    "title": "X-wing",
+    "caption": "X-wing with spark plug engines and a wooden stand.",
+    "images": [
+      {
+        "src": "img/xwing-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, front view"
+      },
+      {
+        "src": "img/xwing-side-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, side view"
+      },
+      {
+        "src": "img/xwing-top-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, top view"
+      }
+    ]
+  },
+  "longhorns": {
+    "title": "Texas Longhorns logo",
+    "caption": "Texas Longhorns logo with a wooden stand.",
+    "images": [
+      {
+        "src": "img/longhorn-front-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Texas Longhorns logo, front view"
+      }
+    ]
+  },
+  "chiefs": {
+    "title": "Kansas City Chiefs logo",
+    "caption": "Kansas City Chiefs logo with a wooden stand.",
+    "images": [
+      {
+        "src": "img/kansas-front-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Kansas City Chiefs logo, front view"
+      }
+    ]
+  },
+  "pigs": {
+    "title": "Pig family",
+    "caption": "Family of pigs made from bolts. The brothers and father wear ties, and the mother and daughter wear dresses.",
+    "images": [
+      {
+        "src": "img/pigs-family-front-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Pig family, front view"
+      },
+      {
+        "src": "img/pigs-family-top-1600.webp",
+        "w": 1600,
+        "h": 1200,
+        "alt": "Pig family, top view"
+      }
+    ]
+  },
+  "dog": {
+    "title": "Dog and fire hydrant",
+    "caption": "Dog and fire hydrant made from bolts and nails.",
+    "images": [
+      {
+        "src": "img/dog-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dog and fire hydrant, front view"
+      },
+      {
+        "src": "img/dog-back-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dog and fire hydrant, back view"
+      }
+    ]
+  }
+};

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mdf2023.github.io/mfm-sculptures/sitemap.xml
