@@ -86,6 +86,51 @@
     fromHash();
   }
 
+  /* ---------- Home hero slideshow ---------- */
+  var slides = document.querySelectorAll(".hero__slide");
+  if (slides.length > 1) {
+    var heroBox = document.querySelector(".hero__photo");
+    var heroName = document.getElementById("hero-name");
+    var heroPause = document.getElementById("hero-pause");
+    var DELAY = 4500; // milliseconds each photo stays on screen. Change this to speed up or slow down.
+    var current = 0;
+    var timer = null;
+    var userPaused = reduceMotion; // people who prefer less motion start paused
+
+    var show = function (index) {
+      slides[current].classList.remove("is-active");
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add("is-active");
+      heroName.textContent = slides[current].getAttribute("data-title");
+    };
+
+    var stop = function () {
+      window.clearInterval(timer);
+      timer = null;
+    };
+
+    var start = function () {
+      if (timer || userPaused || document.hidden) { return; }
+      timer = window.setInterval(function () { show(current + 1); }, DELAY);
+    };
+
+    var setPaused = function (value) {
+      userPaused = value;
+      heroPause.setAttribute("aria-pressed", value ? "true" : "false");
+      heroPause.setAttribute("aria-label", value ? "Play the slideshow" : "Pause the slideshow");
+      if (value) { stop(); } else { start(); }
+    };
+
+    heroPause.addEventListener("click", function () { setPaused(!userPaused); });
+    heroBox.addEventListener("mouseenter", stop);
+    heroBox.addEventListener("mouseleave", start);
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) { stop(); } else { start(); }
+    });
+
+    setPaused(userPaused);
+  }
+
   /* ---------- Build steps slider ---------- */
   var viewport = document.querySelector(".steps-viewport");
   if (viewport) {

@@ -348,11 +348,82 @@ a {
   font-size: 1rem;
 }
 
-.hero__photo img {
-  width: 100%;
+.hero__slides {
+  position: relative;
   aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+/* Every slide is stacked in the same spot; only the active one is visible. */
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: 50% 40%;
+  object-position: 50% 45%;
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+}
+
+.hero__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.75rem;
+  background: linear-gradient(to top, rgba(22, 26, 21, 0.75), rgba(22, 26, 21, 0));
+  color: #fff;
+  pointer-events: none;
+}
+
+.hero__name {
+  font: 800 1.25rem / 1 var(--display);
+  font-stretch: 70%;
+  letter-spacing: 0.02em;
+}
+
+.hero__pause {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: rgba(22, 26, 21, 0.45);
+  color: #fff;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.hero__pause:hover,
+.hero__pause:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.hero__icon {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.hero__icon--play,
+.hero__pause[aria-pressed="true"] .hero__icon--pause {
+  display: none;
+}
+
+.hero__pause[aria-pressed="true"] .hero__icon--play {
+  display: block;
 }
 
 @media (min-width: 860px) {
@@ -382,7 +453,7 @@ a {
 
 /* One orchestrated moment on load: the photo wipes up, the headline rises. */
 @media (prefers-reduced-motion: no-preference) {
-  .hero__photo img {
+  .hero__slides {
     animation: wipe 1100ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
   }
 
@@ -734,7 +805,7 @@ a {
 .tiles {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 0 2rem;
+  gap: 0 1.25rem;
   align-items: start;
   margin: 0;
   padding: 0 0 0.5rem;
@@ -755,7 +826,7 @@ a {
 
 @media (min-width: 760px) {
   .timeline {
-    --rail: 9.5rem;
+    --rail: 9rem;
   }
 
   .year__label {
@@ -779,15 +850,15 @@ a {
 }
 
 .year:first-child::before {
-  margin-top: 2.5rem;
+  margin-top: 1.25rem;
 }
 
 .year:first-child::after {
-  top: 2.5rem;
+  top: 1.25rem;
 }
 
 .year:first-child .year__label {
-  top: 2.5rem;
+  top: 1.25rem;
 }
 
 .tiles__item {
@@ -809,7 +880,26 @@ a {
 
 .tile__photo {
   display: block;
+  /* Every tile photo is cropped to the same square so the grid looks even.
+     Change 1 / 1 to 4 / 5 for taller tiles, or 4 / 3 for wider ones. */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
   background: var(--ground-line);
+}
+
+.tile__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrap--wide {
+  /* Wider than the normal page width, with less side padding, so the
+     portfolio photos can be bigger on large screens. */
+  max-width: 1560px;
+  padding-left: clamp(1rem, 2.5vw, 2rem);
+  padding-right: clamp(1rem, 2.5vw, 2rem);
 }
 
 .tile__title {
@@ -1193,5 +1283,7 @@ a {
 
 .band + .section--flush .notice.pull,
 .band + .section--flush .timeline.pull {
-  margin-top: calc(clamp(0.5rem, 2.3vw, 2rem) * -1);
+  /* How far the first photos overlap the page title. Make the -0.35 bigger
+     (up to -1) for more overlap, smaller (down to 0) for none. */
+  margin-top: calc(clamp(0.5rem, 2.3vw, 2rem) * -0.35);
 }
