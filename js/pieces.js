@@ -338,7 +338,7 @@ window.MFM_PIECES = {
   },
   "dinosaur": {
     "title": "Dinosaur",
-    "caption": "Dinosaur skeleton sculpture.",
+    "caption": "Dinosaur skeleton made from screws and nails.",
     "images": [
       {
         "src": "img/dinosaur-side-1600.webp",
@@ -392,7 +392,7 @@ window.MFM_PIECES = {
   },
   "paper-airplane": {
     "title": "Paper Airplane",
-    "caption": "Folded sheet metal paper airplane.",
+    "caption": "Paper airplane made from welded metal plate.",
     "images": [
       {
         "src": "img/paper-airplane-side-1600.webp",
