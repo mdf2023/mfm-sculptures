@@ -145,6 +145,9 @@ a {
 .section--olive {
   background: var(--olive);
   color: #fff;
+  /* Shorter than the other sections. Make the first number bigger for more
+     space above and below the "Want a Piece of Your Own?" block. */
+  padding: clamp(2rem, 4.5vw, 3.25rem) 0;
 }
 
 .section--flush {
@@ -338,7 +341,8 @@ a {
   order: 1;
   position: relative;
   z-index: 1;
-  margin: 0 0.9rem 0 0;
+  /* Top number = space between the title and the photo on phones. */
+  margin: 1.75rem 0.9rem 0 0;
   background: var(--ground-line);
   box-shadow: 0.9rem 0.9rem 0 var(--olive);
 }
@@ -514,7 +518,8 @@ a {
     grid-column: 7 / 13;
     grid-row: 1 / span 2;
     align-self: start;
-    margin: 1.5rem 0.9rem 0 0;
+    /* The last number is the gap between the title and the photo. */
+    margin: 1.5rem 0.9rem 0 2rem;
   }
 
   .hero__slides {
@@ -573,13 +578,15 @@ a {
   aspect-ratio: 8 / 1;
   object-fit: cover;
   /* Keeps the horizon in view when the photo is cropped. The second number
-     moves the crop up (smaller) or down (bigger). */
-  object-position: 50% 34%;
+     moves the photo up inside the frame (bigger = shows more flowers, smaller
+     = shows more sky). */
+  object-position: 50% 52%;
 }
 
 @media (max-width: 600px) {
   .banner img {
     aspect-ratio: 5 / 1;
+    object-position: 50% 75%;
   }
 }
 
@@ -816,12 +823,30 @@ a {
 
 .cta {
   display: grid;
-  gap: 1.5rem;
-  max-width: 40rem;
+  gap: 1.1rem;
+  justify-items: center;
+  text-align: center;
 }
 
 .cta p {
   margin: 0;
+}
+
+/* The heading is sized from the screen width so it fills the page: one line
+   on wider screens, two lines on phones. The 9.7 and 4.85 are the fit (smaller
+   number = bigger text). */
+.cta .h2 {
+  font-size: min(5.5rem, calc((100vw - 2 * var(--gutter)) / 4.85));
+}
+
+@media (min-width: 860px) {
+  .cta .h2 {
+    font-size: min(7.5rem, calc((100vw - 2 * var(--gutter)) / 9.7));
+  }
+}
+
+.cta .button-row {
+  justify-content: center;
 }
 
 /* Portfolio */
