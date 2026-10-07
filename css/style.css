@@ -318,7 +318,10 @@ a {
   z-index: 0;
   margin: 0;
   color: var(--forest);
-  font: 800 clamp(3.5rem, 11.5vw, 10rem) / 0.86 var(--display);
+  /* Phones and small tablets: the size is worked out from the screen width so
+     "Sculptures" and "from Scrap" each fill the full width before wrapping.
+     The 3.85 is the fit: smaller makes the title bigger, bigger makes it smaller. */
+  font: 800 min(9rem, calc((100vw - 2 * var(--gutter)) / 3.85)) / 0.86 var(--display);
   font-stretch: 66%;
   letter-spacing: -0.015em;
   text-wrap: balance;
@@ -438,6 +441,7 @@ a {
   .hero__title {
     grid-column: 1 / 10;
     grid-row: 1;
+    font-size: clamp(3.5rem, 11.5vw, 10rem);
   }
 
   .hero__photo {
@@ -596,6 +600,28 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/* Phones: the four photos sit in one row you can swipe sideways. The
+   68% is how much of the screen each photo takes (smaller shows more of the
+   next photo peeking in). Wider screens use the grid above. */
+@media (max-width: 859px) {
+  .eagle-grid {
+    display: flex;
+    gap: 0.75rem;
+    margin: 0 calc(var(--gutter) * -1);
+    padding: 0 var(--gutter) 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: thin;
+    scrollbar-color: var(--ink-soft) transparent;
+  }
+
+  .eagle-grid > li {
+    flex: 0 0 68%;
+    scroll-snap-align: start;
+  }
 }
 
 @media (min-width: 860px) {
@@ -1314,4 +1340,45 @@ a {
   /* How far the first photos overlap the page title. Make the -0.35 bigger
      (up to -1) for more overlap, smaller (down to 0) for none. */
   margin-top: calc(clamp(0.5rem, 2.3vw, 2rem) * -0.35);
+}
+
+
+/* Back-to-top button: bottom right, only shows once the menu has scrolled
+   out of view (js/site.js adds .is-visible). */
+.to-top {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  background: rgba(29, 42, 33, 0.82); /* the menu green, slightly see-through */
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.5rem);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms, background-color 150ms ease;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.to-top:hover,
+.to-top:focus-visible {
+  border-color: var(--accent-soft);
+  background: var(--accent);
+}
+
+.to-top svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }

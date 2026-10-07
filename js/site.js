@@ -218,4 +218,26 @@
       setStatus("Your email app should open with your request filled in. If nothing opens, email " + contactEmail + " directly.", "info");
     });
   }
+
+  /* ---------- Back-to-top button ---------- */
+  // Shows once the menu bar has scrolled out of view, hides when it is back.
+  var toTop = document.getElementById("to-top");
+  var header = document.querySelector(".site-header");
+  if (toTop && header) {
+    var setTopButton = function (menuVisible) {
+      toTop.classList.toggle("is-visible", !menuVisible);
+    };
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        setTopButton(entries[0].isIntersecting);
+      }).observe(header);
+    } else {
+      window.addEventListener("scroll", function () {
+        setTopButton(header.getBoundingClientRect().bottom > 0);
+      }, { passive: true });
+    }
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  }
 })();
