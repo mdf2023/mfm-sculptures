@@ -287,10 +287,22 @@ window.MFM_PIECES = {
     "caption": "X-wing with spark plug engines and a wooden stand.",
     "images": [
       {
-        "src": "img/xwing-1600.webp",
+        "src": "img/xwing-front-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, front three-quarter view from above"
+      },
+      {
+        "src": "img/xwing-front-1600.webp",
         "w": 1200,
         "h": 1600,
         "alt": "X-wing, front view"
+      },
+      {
+        "src": "img/xwing-front-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, front three-quarter view"
       },
       {
         "src": "img/xwing-side-1600.webp",
@@ -299,10 +311,28 @@ window.MFM_PIECES = {
         "alt": "X-wing, side view"
       },
       {
-        "src": "img/xwing-top-1600.webp",
+        "src": "img/xwing-side-2-1600.webp",
         "w": 1200,
         "h": 1600,
-        "alt": "X-wing, top view"
+        "alt": "X-wing, side view, other side"
+      },
+      {
+        "src": "img/xwing-back-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, back view"
+      },
+      {
+        "src": "img/xwing-back-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, back three-quarter view"
+      },
+      {
+        "src": "img/xwing-back-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, back three-quarter view from above"
       }
     ]
   },
