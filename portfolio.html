@@ -41,39 +41,10 @@
 
     <section class="section section--flush">
       <div class="wrap">
-        <ul class="tiles pull">
-        <li class="tiles__item" id="duck-tile">
-          <button class="tile" type="button" data-piece="duck">
-            <span class="tile__photo"><img src="img/duck-side-3-800.webp" srcset="img/duck-side-3-800.webp 600w, img/duck-side-3-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Duck, side view" loading="lazy" decoding="async"></span>
-            <span class="tile__title">Duck</span>
-            <span class="tile__made">Spoons</span>
-            <span class="tile__count">8 Photos</span>
-          </button>
-        </li>
-        <li class="tiles__item" id="eagle-tile">
-          <button class="tile" type="button" data-piece="eagle">
-            <span class="tile__photo"><img src="img/eagle-right-800.webp" srcset="img/eagle-right-800.webp 600w, img/eagle-right-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Bald eagle, right view" loading="lazy" decoding="async"></span>
-            <span class="tile__title">Bald Eagle</span>
-            <span class="tile__made">Forks, knives, spoons, nuts, bolts, and a brake rotor</span>
-            <span class="tile__count">4 Photos</span>
-          </button>
-        </li>
-        <li class="tiles__item" id="boat-tile">
-          <button class="tile" type="button" data-piece="boat">
-            <span class="tile__photo"><img src="img/boat-800.webp" srcset="img/boat-800.webp 600w, img/boat-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Fishing boat, three-quarter view" loading="lazy" decoding="async"></span>
-            <span class="tile__title">Fishing Boat</span>
-            <span class="tile__made">Bolts, nails, wire, and formed sheet metal</span>
-            <span class="tile__count">8 Photos</span>
-          </button>
-        </li>
-        <li class="tiles__item" id="helicopter-tile">
-          <button class="tile" type="button" data-piece="helicopter">
-            <span class="tile__photo"><img src="img/helicopter-side-2-800.webp" srcset="img/helicopter-side-2-800.webp 800w, img/helicopter-side-2-1600.webp 1600w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1600" height="1200" alt="Rescue helicopter, side view" loading="lazy" decoding="async"></span>
-            <span class="tile__title">Rescue Helicopter</span>
-            <span class="tile__made">Nails, sheet metal, and spark plug engines</span>
-            <span class="tile__count">8 Photos</span>
-          </button>
-        </li>
+        <div class="timeline pull">
+          <section class="year" aria-labelledby="year-2026">
+            <h2 class="year__label" id="year-2026">2026</h2>
+            <ul class="tiles">
         <li class="tiles__item" id="f1-car-tile">
           <button class="tile" type="button" data-piece="f1-car">
             <span class="tile__photo"><img src="img/f1-car-front-2-800.webp" srcset="img/f1-car-front-2-800.webp 800w, img/f1-car-front-2-1600.webp 1600w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1600" height="1200" alt="F1 car, front three-quarter view" loading="lazy" decoding="async"></span>
@@ -90,12 +61,25 @@
             <span class="tile__count">5 Photos</span>
           </button>
         </li>
-        <li class="tiles__item" id="fisherman-tile">
-          <button class="tile" type="button" data-piece="fisherman">
-            <span class="tile__photo"><img src="img/fisherman-800.webp" srcset="img/fisherman-800.webp 600w, img/fisherman-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Fisherman, front view" loading="lazy" decoding="async"></span>
-            <span class="tile__title">Fisherman</span>
-            <span class="tile__made">Bolts, nails, and washers, on a wooden stand</span>
-            <span class="tile__count">2 Photos</span>
+        <li class="tiles__item" id="paper-airplane-tile">
+          <button class="tile" type="button" data-piece="paper-airplane">
+            <span class="tile__photo"><img src="img/paper-airplane-side-800.webp" srcset="img/paper-airplane-side-800.webp 600w, img/paper-airplane-side-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Paper airplane, side view" loading="lazy" decoding="async"></span>
+            <span class="tile__title">Paper Airplane</span>
+            <span class="tile__made">Welded metal plate</span>
+            <span class="tile__count">5 Photos</span>
+          </button>
+        </li>
+            </ul>
+          </section>
+          <section class="year" aria-labelledby="year-2025">
+            <h2 class="year__label" id="year-2025">2025</h2>
+            <ul class="tiles">
+        <li class="tiles__item" id="eagle-tile">
+          <button class="tile" type="button" data-piece="eagle">
+            <span class="tile__photo"><img src="img/eagle-right-800.webp" srcset="img/eagle-right-800.webp 600w, img/eagle-right-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Bald eagle, right view" loading="lazy" decoding="async"></span>
+            <span class="tile__title">Bald Eagle</span>
+            <span class="tile__made">Forks, knives, spoons, nuts, bolts, and a brake rotor</span>
+            <span class="tile__count">4 Photos</span>
           </button>
         </li>
         <li class="tiles__item" id="xwing-tile">
@@ -106,28 +90,33 @@
             <span class="tile__count">8 Photos</span>
           </button>
         </li>
-        <li class="tiles__item" id="dinosaur-tile">
-          <button class="tile" type="button" data-piece="dinosaur">
-            <span class="tile__photo"><img src="img/dinosaur-side-800.webp" srcset="img/dinosaur-side-800.webp 600w, img/dinosaur-side-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Dinosaur, side view" loading="lazy" decoding="async"></span>
-            <span class="tile__title">Dinosaur</span>
-            <span class="tile__made">Screws and nails</span>
+            </ul>
+          </section>
+          <section class="year" aria-labelledby="year-2024">
+            <h2 class="year__label" id="year-2024">2024</h2>
+            <ul class="tiles">
+        <li class="tiles__item" id="helicopter-tile">
+          <button class="tile" type="button" data-piece="helicopter">
+            <span class="tile__photo"><img src="img/helicopter-side-2-800.webp" srcset="img/helicopter-side-2-800.webp 800w, img/helicopter-side-2-1600.webp 1600w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1600" height="1200" alt="Rescue helicopter, side view" loading="lazy" decoding="async"></span>
+            <span class="tile__title">Rescue Helicopter</span>
+            <span class="tile__made">Nails, sheet metal, and spark plug engines</span>
             <span class="tile__count">8 Photos</span>
           </button>
         </li>
-        <li class="tiles__item" id="paper-airplane-tile">
-          <button class="tile" type="button" data-piece="paper-airplane">
-            <span class="tile__photo"><img src="img/paper-airplane-side-800.webp" srcset="img/paper-airplane-side-800.webp 600w, img/paper-airplane-side-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Paper airplane, side view" loading="lazy" decoding="async"></span>
-            <span class="tile__title">Paper Airplane</span>
-            <span class="tile__made">Welded metal plate</span>
-            <span class="tile__count">5 Photos</span>
+        <li class="tiles__item" id="boat-tile">
+          <button class="tile" type="button" data-piece="boat">
+            <span class="tile__photo"><img src="img/boat-800.webp" srcset="img/boat-800.webp 600w, img/boat-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Fishing boat, three-quarter view" loading="lazy" decoding="async"></span>
+            <span class="tile__title">Fishing Boat</span>
+            <span class="tile__made">Bolts, nails, wire, and formed sheet metal</span>
+            <span class="tile__count">8 Photos</span>
           </button>
         </li>
-        <li class="tiles__item" id="longhorns-tile">
-          <button class="tile" type="button" data-piece="longhorns">
-            <span class="tile__photo"><img src="img/longhorn-front-800.webp" srcset="img/longhorn-front-800.webp 800w, img/longhorn-front-1600.webp 1600w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1600" height="1200" alt="Texas Longhorns logo, front view" loading="lazy" decoding="async"></span>
-            <span class="tile__title">Texas Longhorns Logo</span>
-            <span class="tile__made">Metal logo on a wooden stand</span>
-            
+        <li class="tiles__item" id="pigs-tile">
+          <button class="tile" type="button" data-piece="pigs">
+            <span class="tile__photo"><img src="img/pigs-family-front-800.webp" srcset="img/pigs-family-front-800.webp 800w, img/pigs-family-front-1600.webp 1600w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1600" height="1200" alt="Pig family, front view" loading="lazy" decoding="async"></span>
+            <span class="tile__title">Pig Family</span>
+            <span class="tile__made">Sheet metal, nuts, and bolts</span>
+            <span class="tile__count">2 Photos</span>
           </button>
         </li>
         <li class="tiles__item" id="chiefs-tile">
@@ -138,11 +127,32 @@
             
           </button>
         </li>
-        <li class="tiles__item" id="pigs-tile">
-          <button class="tile" type="button" data-piece="pigs">
-            <span class="tile__photo"><img src="img/pigs-family-front-800.webp" srcset="img/pigs-family-front-800.webp 800w, img/pigs-family-front-1600.webp 1600w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1600" height="1200" alt="Pig family, front view" loading="lazy" decoding="async"></span>
-            <span class="tile__title">Pig Family</span>
-            <span class="tile__made">Sheet metal, nuts, and bolts</span>
+        <li class="tiles__item" id="longhorns-tile">
+          <button class="tile" type="button" data-piece="longhorns">
+            <span class="tile__photo"><img src="img/longhorn-front-800.webp" srcset="img/longhorn-front-800.webp 800w, img/longhorn-front-1600.webp 1600w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1600" height="1200" alt="Texas Longhorns logo, front view" loading="lazy" decoding="async"></span>
+            <span class="tile__title">Texas Longhorns Logo</span>
+            <span class="tile__made">Metal logo on a wooden stand</span>
+            
+          </button>
+        </li>
+            </ul>
+          </section>
+          <section class="year" aria-labelledby="year-2023">
+            <h2 class="year__label" id="year-2023">2023</h2>
+            <ul class="tiles">
+        <li class="tiles__item" id="duck-tile">
+          <button class="tile" type="button" data-piece="duck">
+            <span class="tile__photo"><img src="img/duck-side-3-800.webp" srcset="img/duck-side-3-800.webp 600w, img/duck-side-3-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Duck, side view" loading="lazy" decoding="async"></span>
+            <span class="tile__title">Duck</span>
+            <span class="tile__made">Spoons</span>
+            <span class="tile__count">8 Photos</span>
+          </button>
+        </li>
+        <li class="tiles__item" id="fisherman-tile">
+          <button class="tile" type="button" data-piece="fisherman">
+            <span class="tile__photo"><img src="img/fisherman-800.webp" srcset="img/fisherman-800.webp 600w, img/fisherman-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Fisherman, front view" loading="lazy" decoding="async"></span>
+            <span class="tile__title">Fisherman</span>
+            <span class="tile__made">Bolts, nails, and washers, on a wooden stand</span>
             <span class="tile__count">2 Photos</span>
           </button>
         </li>
@@ -154,7 +164,17 @@
             <span class="tile__count">2 Photos</span>
           </button>
         </li>
-        </ul>
+        <li class="tiles__item" id="dinosaur-tile">
+          <button class="tile" type="button" data-piece="dinosaur">
+            <span class="tile__photo"><img src="img/dinosaur-side-800.webp" srcset="img/dinosaur-side-800.webp 600w, img/dinosaur-side-1600.webp 1200w" sizes="(min-width: 1000px) 31vw, (min-width: 600px) 46vw, 92vw" width="1200" height="1600" alt="Dinosaur, side view" loading="lazy" decoding="async"></span>
+            <span class="tile__title">Dinosaur</span>
+            <span class="tile__made">Screws and nails</span>
+            <span class="tile__count">8 Photos</span>
+          </button>
+        </li>
+            </ul>
+          </section>
+        </div>
       </div>
     </section>
   </main>

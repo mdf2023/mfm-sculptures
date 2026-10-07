@@ -634,24 +634,134 @@ a {
   margin: 1rem 0 0;
 }
 
-.tiles {
-  columns: 1;
-  column-gap: 2rem;
+/* Portfolio timeline: newest year at the top, oldest at the bottom */
+
+.timeline {
+  --rail: 3.25rem;
+  --dot: 0.9rem;
+}
+
+.year {
+  display: grid;
+  grid-template-columns: var(--rail) minmax(0, 1fr);
+  column-gap: clamp(0.75rem, 2.5vw, 1.75rem);
+}
+
+.year__label {
+  position: relative;
   margin: 0;
-  padding: 0;
+  padding: 0.25rem 0 2rem 1.25rem;
+  color: var(--forest);
+  font: 800 1.9rem / 1 var(--display);
+  font-stretch: 70%;
+  letter-spacing: 0.02em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: end;
+  align-self: start;
+}
+
+/* The line runs the full height of every year so the years join up. */
+.year::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  width: 3px;
+  margin-left: calc(var(--dot) / 2 - 1.5px);
+  background: var(--forest);
+}
+
+.year > * {
+  grid-row: 1;
+}
+
+.year__label {
+  grid-column: 1;
+}
+
+.year .tiles {
+  grid-column: 2;
+}
+
+/* The dot that marks where each year begins. */
+.year::after {
+  content: "";
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  align-self: start;
+  width: var(--dot);
+  height: var(--dot);
+  margin-top: 0.35rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--ground);
+}
+
+.year__label {
+  margin-left: calc(var(--dot) + 0.15rem);
+  padding-left: 0;
+  padding-top: 1.75rem;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0 2rem;
+  align-items: start;
+  margin: 0;
+  padding: 0 0 0.5rem;
   list-style: none;
 }
 
 @media (min-width: 600px) {
   .tiles {
-    columns: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1000px) {
   .tiles {
-    columns: 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+
+@media (min-width: 760px) {
+  .timeline {
+    --rail: 9.5rem;
+  }
+
+  .year__label {
+    margin-left: calc(var(--dot) + 0.9rem);
+    padding-top: 0;
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: start;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .year::after {
+    margin-top: calc(clamp(3rem, 6vw, 4.5rem) / 2 - var(--dot) / 2);
+  }
+}
+
+.year:first-child::before,
+.year:first-child::after,
+.year:first-child .year__label {
+  position: relative;
+}
+
+.year:first-child::before {
+  margin-top: 2.5rem;
+}
+
+.year:first-child::after {
+  top: 2.5rem;
+}
+
+.year:first-child .year__label {
+  top: 2.5rem;
 }
 
 .tiles__item {
@@ -1056,6 +1166,6 @@ a {
 }
 
 .band + .section--flush .notice.pull,
-.band + .section--flush .tiles.pull {
+.band + .section--flush .timeline.pull {
   margin-top: calc(clamp(0.5rem, 2.3vw, 2rem) * -1);
 }
