@@ -493,13 +493,13 @@ a {
   width: 100%;
   /* Banner height: width / height. Bigger first number = shorter banner
      (3 / 1 is tall, 5 / 1 is medium, 8 / 1 is a thin strip). */
-  aspect-ratio: 5 / 1;
+  aspect-ratio: 6 / 1;
   object-fit: cover;
 }
 
 @media (max-width: 600px) {
   .banner img {
-    aspect-ratio: 3 / 1;
+    aspect-ratio: 4 / 1;
   }
 }
 
