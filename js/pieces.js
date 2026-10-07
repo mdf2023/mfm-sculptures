@@ -287,10 +287,22 @@ window.MFM_PIECES = {
     "caption": "X-wing with spark plug engines and a wooden stand.",
     "images": [
       {
-        "src": "img/xwing-1600.webp",
+        "src": "img/xwing-front-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, front three-quarter view from above"
+      },
+      {
+        "src": "img/xwing-front-1600.webp",
         "w": 1200,
         "h": 1600,
         "alt": "X-wing, front view"
+      },
+      {
+        "src": "img/xwing-front-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, front three-quarter view"
       },
       {
         "src": "img/xwing-side-1600.webp",
@@ -299,10 +311,118 @@ window.MFM_PIECES = {
         "alt": "X-wing, side view"
       },
       {
-        "src": "img/xwing-top-1600.webp",
+        "src": "img/xwing-side-2-1600.webp",
         "w": 1200,
         "h": 1600,
-        "alt": "X-wing, top view"
+        "alt": "X-wing, side view, other side"
+      },
+      {
+        "src": "img/xwing-back-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, back view"
+      },
+      {
+        "src": "img/xwing-back-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, back three-quarter view"
+      },
+      {
+        "src": "img/xwing-back-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "X-wing, back three-quarter view from above"
+      }
+    ]
+  },
+  "dinosaur": {
+    "title": "Dinosaur",
+    "caption": "Dinosaur skeleton made from screws and nails.",
+    "images": [
+      {
+        "src": "img/dinosaur-side-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, side view"
+      },
+      {
+        "src": "img/dinosaur-front-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, front three-quarter view"
+      },
+      {
+        "src": "img/dinosaur-front-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, front view"
+      },
+      {
+        "src": "img/dinosaur-side-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, side three-quarter view"
+      },
+      {
+        "src": "img/dinosaur-side-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, side view, other side"
+      },
+      {
+        "src": "img/dinosaur-back-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, back view from above"
+      },
+      {
+        "src": "img/dinosaur-back-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, back three-quarter view"
+      },
+      {
+        "src": "img/dinosaur-back-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Dinosaur, back three-quarter view, other side"
+      }
+    ]
+  },
+  "paper-airplane": {
+    "title": "Paper Airplane",
+    "caption": "Paper airplane made from welded metal plate.",
+    "images": [
+      {
+        "src": "img/paper-airplane-side-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Paper airplane, side view"
+      },
+      {
+        "src": "img/paper-airplane-front-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Paper airplane, front view"
+      },
+      {
+        "src": "img/paper-airplane-side-2-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Paper airplane, side view, other side"
+      },
+      {
+        "src": "img/paper-airplane-side-3-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Paper airplane, low side view"
+      },
+      {
+        "src": "img/paper-airplane-top-1600.webp",
+        "w": 1200,
+        "h": 1600,
+        "alt": "Paper airplane, top view"
       }
     ]
   },
